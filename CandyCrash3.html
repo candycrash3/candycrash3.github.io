@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - CandyCrash3</title>
+</head>
+<body>
+
+<h1>PRIVACY POLICY - CANDYCRASH3</h1>
+
+<p><strong>Last Updated:</strong> June 2, 2025</p>
+
+<p><strong>Developer:</strong> FINESSE SPA SALONS<br>
+<strong>Contact:</strong> Altheajxmvy@gmail.com<br>
+<strong>Address:</strong> 2520 Chamberlain St Ste 101, Ames, IA 50014-8371, United States</p>
+
+<h2>SUMMARY</h2>
+<p>CandyCrash3 does not collect personal information that can identify individual users. We may collect non-personal usage data (such as game session timestamps, level progress, and feature usage) to improve the gaming experience. We implement appropriate security measures to protect collected data and do not sell or transfer user information to external parties.</p>
+
+<h2>WHAT WE COLLECT</h2>
+<p><strong>We DO NOT collect personal information</strong> such as names, email addresses, or contact details.</p>
+
+<p><strong>We MAY collect non-personal game data:</strong></p>
+<ul>
+<li>Game session timestamps and duration</li>
+<li>Level completion and game progress</li>
+<li>In-game feature usage (power-ups, hints used)</li>
+<li>Device performance data (to prevent crashes)</li>
+<li>General gameplay statistics and patterns</li>
+</ul>
+
+<h2>HOW WE USE INFORMATION</h2>
+<p>Non-personal information is used to:</p>
+<ul>
+<li>Provide and maintain game functionality</li>
+<li>Save your game progress locally on your device</li>
+<li>Analyze gameplay trends to improve game balance</li>
+<li>Enhance user experience and game features</li>
+<li>Ensure the game runs smoothly and fix technical issues</li>
+<li>Understand which game features are most popular</li>
+</ul>
+
+<h2>DATA SECURITY</h2>
+<p>We implement appropriate security measures to protect non-personal data from unauthorized access, use, or disclosure. All data is encrypted during transmission and stored securely.</p>
+
+<h2>YOUR RIGHTS</h2>
+<p>Since we do not collect personal information, there are no specific personal data rights. However, you have the right to:</p>
+<ul>
+<li>Uninstall the app at any time</li>
+<li>Contact us with privacy questions</li>
+<li>Clear game data through device settings</li>
+</ul>
+
+<h2>CHILDREN'S PRIVACY</h2>
+<p>CandyCrash3 is suitable for all ages. We do not knowingly collect any information from children under 13. If you are a parent and believe your child has provided information to us, please contact us immediately.</p>
+
+<h2>POLICY UPDATES</h2>
+<p>We may update this Privacy Policy periodically. Any changes will be posted on this page with an updated "Last Updated" date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+<h2>CONTACT US</h2>
+<p>For questions about this Privacy Policy, contact us at:</p>
+<p><strong>Email:</strong> Altheajxmvy@gmail.com<br>
+<strong>Company:</strong> FINESSE SPA SALONS</p>
+
+<p><em>Thank you for playing CandyCrash3! We are committed to protecting your privacy while providing an enjoyable gaming experience.</em></p>
+
+<script>window.parent.postMessage({ action: "ready" }, "*"); 
+ 
+window.console = new Proxy(console, {
+  get(target, prop) {
+    if (['log', 'warn', 'error'].includes(prop)) {
+      return new Proxy(target[prop], {
+        apply(fn, thisArg, args) {
+          fn.apply(thisArg, args);
+          window.parent.postMessage({ action: 'console', 
+            type: prop, 
+            args: args.map((arg) => {
+              try {
+                return JSON.stringify(arg).replace(/^["']|["']$/g, '');
+              } catch (e) {
+                return arg;
+              }
+            }) 
+          }, '*');
+        }
+      });
+    }
+    return target[prop];
+  }
+});
+</script></body>
+</html>
